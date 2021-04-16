@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('agency/create', 'AgencyController@store');
+Route::delete('agency/delete', 'AgencyController@delete');
+
+Route::post('news/create','NewsController@store');
+Route::delete('news/delete', 'NewsController@delete');
+
+//Route::get('news/index', 'NewsController@index');
